@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pegasus Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./img/logo/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="container-fluid menu_nav">
+    <ul class="nav">
+      <li class="logo"><a href="#"><img src="img/logo/logo.png" alt="Logo de Pegasus Store"></a>Pegasus Store</li>
+      <li class="carro-contenedor">
+        <a class="boton-carrito" href="#" id="icono-carrito">
+          <i class="bi bi-cart-fill"></i> <span id="cantidad" class="cantidad">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="alerta" class="sticky-top"></div>
+
+  <section>
+    <img src="img/Banner/banner-argentina.jpg" class="w-100" alt="Campera Sportwear therma-fit">
+  </section>
+
+  <div class="wrapper">
+    <nav>
+      <ul class="menu">
+        <li class="fs-3 fw-bold text-light text-center   pt-5 text-uppercase">
+          Categorías
+        </li>
+        <li>
+          <button id="todos" class="boton-menu boton-categoria active"> Todos los productos</button>
+        </li>
+        <li>
+          <button id="zapatillas" class="boton-menu boton-categoria"> Zapatillas</button>
+        </li>
+        <li>
+          <button id="camisetas" class="boton-menu boton-categoria"> Camisetas</button>
+        </li>
+        <li>
+          <button id="camperas" class="boton-menu boton-categoria"> Camperas</button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- Anuncio -->
+        <div id="anuncio"></div>
+
+      <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+      <div id="contenedor-productos" class="contenedor-productos">
+        <!-- Esto se va a completar con JS -->
+      </div>
+      
+      <section>
+        <div class="carrito">
+          <h2 class="titulo-principal text-center">Carrito</h2>
+
+          <div class="contenedor-carrito">
+            <p id="carrito-vacio" class="carrito-vacio">Tu carrito actualmente está vacío. Agregá algún producto de la
+              tienda.</p>
+
+            <div id="carrito-productos" class="carrito-productos deshabilitado">
+
+            </div>
+
+            <div id="carrito-acciones" class="carrito-acciones deshabilitado">
+              <div class="carrito-acciones-izquierda">
+                <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar btn btn-danger"> <i
+                    class="bi bi-trash-fill"></i> Vaciar carrito</button>
+              </div>
+              <div class="carrito-acciones-derecha">
+                <div class="carrito-acciones-total">
+                  <p>Total:</p>
+                  <p id="total">$</p>
+                </div>
+                <button class="carrito-acciones-comprar" data-bs-toggle="modal" data-bs-target="#formCompra">Comprar
+                  ahora</button>
+              </div>
+            </div>
+          </div>
+
+          <!--Cerrar Carrito-->
+          <i class="bi bi-x" id="cerrar-carrito"></i>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="container-fluid contenedor-newsletter">
+    <div class="newsletter container">
+      <p class="text-uppercase mt-3 texto-newsletter">Suscribite al newletter</p>
+      <div>
+        <form action="#" class="d-flex">
+          <input class="form-control me-3 w-100" type="email" placeholder="Ingresá tu E-mail.." aria-label="Newletter">
+          <button type="submit" class="btn btn-dark px-4 newsletter-enviar">Enviar</button>
+        </form>
+      </div>
+      <div class="d-flex gap-4">
+        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class=" footer text-center text-lg-start text-light">
+    <button class="arriba" id="arriba"><i class="bi bi-arrow-up"></i></button>
+
+    <section class="footer-content">
+      <div class="container text-center text-md-start">
+        <div class="row gap-5 py-5">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto">
+            <h3 class="text-uppercase fw-bold mb-4 fs-4">Pegasus Store</h3>
+            <p>
+              Tienda de artículos deportivos con excelente
+              servicio al cliente. Precios bajos y gran variedad de
+              productos disponibles.
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4 links-footer">
+            <h3 class="text-uppercase fw-bold mb-4 fs-4">
+              Medios de Pago
+            </h3>
+            <div class="metodos-pago">
+              <img src="img/medios-de-pago/amex.png" alt="american express">
+              <img src="img/medios-de-pago/visa.png" alt="visa">
+              <img src="img/medios-de-pago/cabal.png" alt="cabal">
+              <img src="img/medios-de-pago/mastercard.png" alt="mastercard">
+              <img src="img/medios-de-pago/pagofacil.png" alt="pagofacil">
+              <img src="img/medios-de-pago/rapipago.png" alt="rapipago">
+              <img src="img/medios-de-pago/tarjeta-naranja.png" alt="tarjeta naranja">
+              <img src="img/medios-de-pago/mercadopago.png" alt="mercado pago">
+              <img src="img/medios-de-pago/banelco.png" alt="mercado pago">
+            </div>
+          </div>
+
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h3 class="text-uppercase fw-bold mb-4 fs-4">
+              Contacto
+            </h3>
+            <p><i class="bi bi-house-door-fill me-2"></i>Av.Cabildo 3876</p>
+            <p><i class="bi bi-envelope-fill me-2"></i>PegasusStore@tienda.com</p>
+            <p><i class="bi bi-telephone-fill me-2"></i>4524-0610</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de compra -->
+    <div class="modal fade" id="formCompra" tabindex="-1" aria-labelledby="formCompra" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="formCompra">Ingresá tus datos</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="carrito-comprado" class="carrito-comprado deshabilitado"></p>
+            <div id="containerForm">
+              
+              <div id="error" class="mostrar_error"></div>
+
+              <form class="row " id="formCompra" novalidate>
+                <div class="mb-3 col-6">
+                  <label for="nombre" class="col-form-label requerido">Nombre</label>
+                  <input type="text" class="form-control" name="nombre" id="nombre"/ placeholder="Ingrese su nombre" required>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="apellido" class="col-form-label requerido">Apellido</label>
+                  <input type="text" class="form-control" name="apellido" id="apellido"/ placeholder="Ingrese su apellido" required>
+                </div>
+                
+                <div class="mb-3 col-6">
+                  <label for="email" class="col-form-label requerido">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Ej: pepe@gmail.com" required>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="telefono" class="col-form-label requerido">Número de celular</label>
+                  <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Ingrese su celular" required>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="localidad" class="col-form-label requerido">Localidad</label>
+                  <select class="form-select" name="localidad" id="localidad">
+                    <option selected disabled value="seleccione su localidad">Seleccione una localidad</option>
+                    <option value="Agronomía">Agronomía</option>
+                    <option value="Almagro">Almagro</option>
+                    <option value="Balvanera">Balvanera</option>
+                    <option value="Barracas">Barracas</option>
+                    <option value="Belgrano">Belgrano</option>
+                    <option value="Boedo">Boedo</option>
+                    <option value="Caballito">Caballito</option>
+                    <option value="Chacarita">Chacarita</option>
+                    <option value="Coghlan">Coghlan</option>
+                    <option value="Colegiales">Colegiales</option>
+                    <option value="Flores">Flores</option>
+                    <option value="Floresta">Floresta</option>
+                    <option value="La Boca">La Boca</option>
+                    <option value="La Paternal">La Paternal</option>
+                    <option value="Liniers">Liniers</option>
+                    <option value="Mataderos">Mataderos</option>
+                    <option value="Monte Castro">Monte Castro</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Nueva Pompeya">Nueva Pompeya</option>
+                    <option value="Nuñez">Nuñez</option>
+                    <option value="Palermo">Palermo</option>
+                    <option value="Parque Avellaneda">Parque Avellaneda</option>
+                    <option value="Parque Chacabuco">Parque Chacabuco</option>
+                    <option value="Parque Chas">Parque Chas</option>
+                    <option value="Parque Patricios">Parque Patricios</option>
+                    <option value="Puerto Madero">Puerto Madero</option>
+                    <option value="Recoleta">Recoleta</option>
+                    <option value="Retiro">Retiro</option>
+                    <option value="Saavedra">Saavedra</option>
+                    <option value="San Cristóbal">San Cristóbal</option>
+                    <option value="San Nicolás">San Nicolás</option>
+                    <option value="San Telmo">San Telmo</option>
+                    <option value="Versalles">Versalles</option>
+                    <option value="Villa Crespo">Villa Crespo</option>
+                    <option value="Villa Devoto">Villa Devoto</option>
+                    <option value="Villa General Mitre">Villa General Mitre</option>
+                    <option value="Villa Lugano">Villa Lugano</option>
+                    <option value="Villa Luro">Villa Luro</option>
+                    <option value="Villa Ortúzar">Villa Ortúzar</option>
+                    <option value="Villa Pueyrredón">Villa Pueyrredón</option>
+                    <option value="Villa Riachuelo">Villa Riachuelo</option>
+                    <option value="Villa Santa Rita">Villa Santa Rita</option>
+                    <option value="Villa Soldati">Villa Soldati</option>
+                    <option value="Villa Urquiza">Villa Urquiza</option>
+                    <option value="Villa del Parque">Villa del Parque</option>
+                    <option value="Vélez Sarsfield">Vélez Sarsfield</option>
+                  </select>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="direccion" class="col-form-label requerido">Dirección</label>
+                  <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese su dirección" required/>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="dni" class="col-form-label requerido">DNI</label>
+                  <input type="number" class="form-control" name="dni" id="dni" placeholder="Ingrese su documento" required/>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="cod-postal" class="col-form-label requerido">Código Postal</label>
+                  <input type="number" class="form-control" name="codigo postal" id="cod-postal" placeholder="Ej: 1453" required>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="tarjeta" class="col-form-label requerido">Número de tarjeta</label>
+                  <input type="number" class="form-control" name="tarjeta" id="tarjeta" placeholder="Ej: 4000 0012 3456 7899" required>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="titularTarjeta" class="col-form-label requerido">Titular de la tarjeta</label>
+                  <input type="text" class="form-control" id="titularTarjeta" placeholder="Ingrese el nombre del titular de la tarjeta">
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="fechaVencimiento" class="col-form-label requerido">Fecha de vencimiento</label>
+                  <input type="date" class="form-control" id="fechaVencimiento">
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label for="cod-seguridad" class="col-form-label requerido">Código de seguridad</label>
+                  <div class="cod-seguridad">
+                    <input type="number" class="form-control" name="codigo de seguridad" id="cod-seguridad" placeholder="Ej: 458" required>
+                    <img src="./img/logo/num-tarjeta.png" alt="Código de seguridad">
+                  </div>
+                </div>
+
+                <div class="btns-modal">
+                  <button type="button" class="btn btn-secondary btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                  <button id="carrito-acciones-comprar" type="submit" onclick=" return validarFormulario()" class="btn btn-primary btn-comprar">Comprar</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy ">
+      © 2022 Copyright:
+      <a class="fw-bold" href="https://gndgaming.com/">PegasusStore.com</a> <!--Link inexistente-->
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
